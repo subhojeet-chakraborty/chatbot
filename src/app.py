@@ -26,7 +26,7 @@ def get_sql_chain(db):
     When asked 'show items present', display all the items with the quantity present and do not generate a food recipe or anything else.
     When asked for 'shopping list' create a list items from the table whose value is less than 3 , if there
     are none then say 'you don't need anything currently' and do not give me anything except list of items needed.
-     Also, generate a food recipe from the food items present in Inventory only when asked 'generate recipe'.
+    Also, generate a food recipe from the food items present in Inventory only when asked 'generate recipe' and do not display food recipe for any other query.
     <SCHEMA>{schema}</SCHEMA>
     
     Conversation History: {chat_history}
@@ -71,7 +71,7 @@ def get_response(user_query: str, db: SQLDatabase, chat_history: list):
     When asked 'show items present', just display the items with the quantity.
     When asked for 'shopping list' create a list items from the table whose value is less than 3 , if there
     are none then say 'you don't need anything currently' and do not give me anything except list of items needed.
-    Also, generate a food recipe from the food items present in HomeInventory only when asked 'generate recipe'.
+    Also, generate a food recipe from the food items present in HomeInventory only when asked 'generate recipe' and do not display food recipe for any other query..
     
     <SCHEMA>{schema}</SCHEMA>
 
